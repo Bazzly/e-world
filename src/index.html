@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E World</title>
+    <!-- tailwind css -->
+    <link href="./output.css" rel="stylesheet">
+    <!-- material ui -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,0,0" />
+    <!-- animate on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <!-- style -->
+    <style>
+        /* google font */
+        @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+        .font-poetsen {
+            font-family: "Poetsen One", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-blue-900 py-12">
+    <!-- body adjuster -->
+    <div class="max-w-[1280px] w-[90%] mx-auto">
+        <!-- Owner info -->
+        <div class="flex flex-col lg:flex-row gap-5 lg:items-center">
+            <!-- Owner Image -->
+            <div data-aos="fade-right" data-aos-duration="2000" class="max-w-[400px] rounded-full overflow-hidden mx-auto">
+                <img class="w-full h-full" src="./assets/dp_img.jpeg" alt="Adedapo Emmanuel Majekadegbe">
+            </div>
+            <div>
+                <!-- Owner Name -->
+                <p data-aos="fade-left" data-aos-duration="2000" class="font-poetsen mt-9 text-4xl font-semibold text-gray-400 text-center lg:text-left">Adedapo Emmanuel Majekadegbe </br> (E-World)</p>
+                <!-- Owner about -->
+                <p data-aos="fade-left" data-aos-duration="2000" class="mt-5 lg:mt-10 mx-auto font-medium text-gray-900 text-xl text-justify">Digital Marketer Professional , innovative strategist , seasoned entrepreneur, dedicated advocate for promoting, inspiring , motivating, and educating others on profitable online business opportunities and skill development</p>
+            </div>
+        </div>
+        <!-- Brands section -->
+        <div class="mt-12">
+            <!-- Heading -->
+            <p class="text-gray-400 mx-auto font-bold italic border-[3px] w-fit px-5 pt-2 pb-6 border-black rounded-full">MY BRANDS</p>
+            <!-- brands -->
+            <div class="mt-10 gap-7 flex flex-col items-center">
+                <!-- brand -->
+                <div class="rounded-full border-2 w-[250px] h-[250px] hover:scale-90 transition-all duration-500 ease-in-out">
+                    <a href="https://pdsworldofent.com/tv" target="_blank">
+                      <img class="p-2 rounded-full h-full w-full" src="./assets/pds_wrld_logo.jpeg" alt="PDS World">
+                    </a>
+                  </div>
+                <!-- brand -->
+                <div class="rounded-full border-2 w-[250px] h-[250px] hover:scale-90 transition-all duration-500 ease-in-out">
+                    <a href="https://officialeworld.com" target="_blank">
+                        <img class="p-2 rounded-full h-full w-full" src="./assets/eworld_logo.jpeg" alt="E World">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Subscription Form -->
+        <div data-aos="zoom-in" data-aos-duration="1000" class="mt-12 max-w-[600px] mx-auto px-6 lg:px-10 py-28 bg-white rounded-3xl">
+            <!-- heading -->
+            <p class="text-center font-medium text-lg">Get Bi-Weekly Mentorship Emails</p>
+            <!-- detail -->
+            <p class="text-center mt-4 text-lg font-medium italic">Get 3 Emails Directly from Adedapo Emmanuel Majekadegbe,Motivating and giving tips on Business opportunities and skills that can fetch you money on the internet .</p>
+            <!-- form -->
+            <form action="#" class="mt-5 flex gap-3 flex-col">
+                <!-- name -->
+                <input name="name" class="bg-gray-200 text-lg text-gray-700 placeholder:text-gray-700 placeholder:font-medium py-1 px-2 w-full rounded-full" type="text" placeholder="Name">
+                <!-- Email -->
+                <input name="email" class="bg-gray-200 text-lg text-gray-700 placeholder:text-gray-700 placeholder:font-medium py-1 px-2 w-full rounded-full" type="text" placeholder="E-mail">
+                <!-- send -->
+                <button type="submit" class="py-2 px-4 flex items-center gap-2 bg-gray-400 w-fit font-bold text-white mx-auto rounded-full"><span>Join 1000 + Others</span><span class="text-sm material-symbols-outlined">check</span></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

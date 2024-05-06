@@ -23,13 +23,13 @@
         }
     </style>
 </head>
-<body class="bg-blue-900 py-12">
+<body class="bg-blue-900 py-12 relative">
     <!-- body adjuster -->
     <div class="max-w-[1280px] w-[90%] mx-auto">
         <!-- Owner info -->
         <div class="flex flex-col lg:flex-row gap-5 lg:items-center">
             <!-- Owner Image -->
-            <div data-aos="fade-right" data-aos-duration="2000" class="max-w-[400px] rounded-full overflow-hidden mx-auto">
+            <div data-aos="fade-right" data-aos-duration="2000" class="max-w-[400px] border-[3px] border-white p-2 overflow-hidden mx-auto">
                 <img class="w-full h-full" src="./src/assets/dp_img.jpeg" alt="Adedapo Emmanuel Majekadegbe">
             </div>
             <div>
@@ -42,7 +42,10 @@
         <!-- Brands section -->
         <div class="mt-12">
             <!-- Heading -->
-            <p class="text-gray-400 mx-auto font-bold italic border-[3px] w-fit px-5 pt-2 pb-6 border-black rounded-full">MY BRANDS</p>
+            <div class="w-fit mx-auto">
+                <p class="text-white font-bold italic w-fit border-black rounded-full">MY BRANDS</p>
+                <div class="w-[60px] h-[2px] bg-white"></div>
+            </div>
             <!-- brands -->
             <div class="mt-10 gap-7 flex flex-col items-center">
                 <!-- brand -->
@@ -66,14 +69,24 @@
             <!-- detail -->
             <p class="text-center mt-4 text-lg font-medium italic">Get 3 Emails Directly from Adedapo Emmanuel Majekadegbe,Motivating and giving tips on Business opportunities and skills that can fetch you money on the internet .</p>
             <!-- form -->
-            <form action="#" class="mt-5 flex gap-3 flex-col">
+            <form id="submitForm" action="#" class="mt-5 flex gap-3 flex-col" @submit.prevent="if ($event.target.checkValidity()) { showModal = true }">
                 <!-- name -->
-                <input name="name" class="bg-gray-200 text-lg text-gray-700 placeholder:text-gray-700 placeholder:font-medium py-1 px-2 w-full rounded-full" type="text" placeholder="Name">
+                <input name="name" required class="bg-gray-200 text-lg text-gray-700 placeholder:text-gray-700 placeholder:font-medium py-1 px-2 w-full rounded-full" type="text" placeholder="Name">
                 <!-- Email -->
-                <input name="email" class="bg-gray-200 text-lg text-gray-700 placeholder:text-gray-700 placeholder:font-medium py-1 px-2 w-full rounded-full" type="text" placeholder="E-mail">
+                <input name="email" required class="bg-gray-200 text-lg text-gray-700 placeholder:text-gray-700 placeholder:font-medium py-1 px-2 w-full rounded-full" type="text" placeholder="E-mail">
                 <!-- send -->
                 <button type="submit" class="py-2 px-4 flex items-center gap-2 bg-gray-400 w-fit font-bold text-white mx-auto rounded-full"><span>Join 1000 + Others</span><span class="text-sm material-symbols-outlined">check</span></button>
             </form>
+        </div>
+        <!-- form submission modal -->
+        <div id="formSubmissionModal" class="hidden w-full h-full items-center top-0 right-0 bg-black/50 fixed">
+            <div class="bg-white px-5 pb-[3rem] pt-5 rounded-3xl mx-auto max-w-[400px] w-[90%]">
+                <div id="cancelModal" class="cursor-pointer flex justify-end mb-[3rem]">X</div>
+                <div class="flex gap-5 flex-col items-center justify-center">
+                    <img class="bg-blend-lighten max-w-[100px]" src="./src/assets/success.gif" alt="success">
+                    <p class="text-center text-lg font-medium">Congratulations! See you at the top</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -82,5 +95,6 @@
     <script>
         AOS.init();
     </script>
+    <script src="./src/js/index.js"></script>
 </body>
 </html>

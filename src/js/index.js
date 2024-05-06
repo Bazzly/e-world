@@ -36,9 +36,9 @@ const handleSubmitForm = (e) => {
   
 //   $('#email').on('input', validate);
 
-// const handleCancelModal = () => {
-//     formSubmissionModal.style.display = 'none';
-// }
+const handleCancelModal = () => {
+    formSubmissionModal.style.display = 'none';
+}
 
 // event listeners
 submitForm.addEventListener('submit', handleSubmitForm);

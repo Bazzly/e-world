@@ -8,6 +8,7 @@ const handleSubmitForm = (e) => {
     e.preventDefault();
     console.log('submitted');
     formSubmissionModal.style.display = 'flex';
+    e.target.reset();
 }
 
 const handleCancelModal = () => {

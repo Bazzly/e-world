@@ -2774,6 +2774,10 @@ video {
     margin-top: 2.5rem;
   }
 
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
   .lg\:min-w-\[400px\] {
     min-width: 400px;
   }

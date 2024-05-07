@@ -1,5 +1,15 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.4.3"
-  }
+  },
+  "name": "e-world",
+  "description": "Marketing Website Creation for Client\r Project Overview\r This project involves the creation of a marketing website for a client, awarded to BazzlyLinks Information Technology Services. \r The client is \"officialeworld.com,\" and the project is awarded to one of our esteemed mentors as a benefit and reward for their exceptional performance as a highly rated mentor in the front-end field on igetmentor.com.",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

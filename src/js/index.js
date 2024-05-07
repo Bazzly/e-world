@@ -1,40 +1,28 @@
+// imports
+import { db } from "./firebase.js";
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"; 
+
 // variables
 const submitForm = document.getElementById('submitForm');
 const formSubmissionModal = document.getElementById('formSubmissionModal');
 const cancelModal = document.getElementById('cancelModal');
 
 // functions
-const handleSubmitForm = (e) => {
+const handleSubmitForm = async (e) => {
     e.preventDefault();
-    console.log('submitted');
-    formSubmissionModal.style.display = 'flex';
-    e.target.reset();
+    // add form details to firestore db
+    try {
+        const docRef = await addDoc(collection(db, "subscribers"), {
+          name: e.target.name.value,
+          email: e.target.email.value
+        });
+        console.log('submitted');
+        formSubmissionModal.style.display = 'flex';
+        e.target.reset();
+    } catch (e) {
+        console.error("Error adding document: ", e);
+    }
 }
-
-// email validation 
-
-// const validateEmail = (email) => {
-//     return email.match(
-//       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-//     );
-//   };
-  
-//   const validate = () => {
-//     const $result = $('#result');
-//     const email = $('#email').val();
-//     $result.text('');
-  
-//     if(validateEmail(email)){
-//       $result.text(email + ' is valid.');
-//       $result.css('color', 'green');
-//     } else{
-//       $result.text(email + ' is invalid.');
-//       $result.css('color', 'red');
-//     }
-//     return false;
-//   }
-  
-//   $('#email').on('input', validate);
 
 const handleCancelModal = () => {
     formSubmissionModal.style.display = 'none';
